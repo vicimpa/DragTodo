@@ -1,0 +1,92 @@
+html, body
+  width: 100%
+  height: 100%
+
+  margin: 0
+  padding: 0
+
+body
+  display: flex
+  justify-content: center
+
+.todo
+  width: 400px
+  height: 100%
+  display: flex
+  flex-direction: column
+
+  border-left: 1px solid #999
+  border-right: 1px solid #999
+
+  .head
+    display: flex
+    justify-content: space-between
+
+    input
+      flex-grow: 1
+
+    button
+      cursor: pointer
+
+      &:hover
+        background: #DDD
+
+    input, button
+      background: none
+      border: none
+      padding: 10px
+      border-bottom: 1px solid #999
+      outline: none
+
+  .body
+    display: flex
+    flex-direction: column
+
+    .item
+      display: flex
+      justify-content: space-between
+      padding: 10px
+      height: 20px
+
+      &.helper
+        position: fixed
+        z-index: 1
+        background: #fff
+        opacity: 0.8
+        top: -10px
+        left: -10px
+        display: none
+
+        &.active
+          display: flex
+
+      &.hidden
+        color: transparent
+        background: #ddd
+
+        input, button
+          display: none
+
+      .dnd
+        border-left: 4px solid #f00
+
+      p
+        margin: 0
+        flex-grow: 1
+
+        &.check
+          text-decoration: line-through
+          opacity: 0.5
+      
+      p, input
+        cursor: pointer
+
+      button
+        border: none
+        background: none
+        cursor: pointer
+        outline: none
+      
+      input
+        margin-right: 10px
+        z-index: -1
