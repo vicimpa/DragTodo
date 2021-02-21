@@ -8,7 +8,7 @@
 ```
 
 > ### Онлайн демо
-> Перейти нужно [сюда](https://vicimpa.github.io/todo)
+> Перейти нужно [сюда](https://vicimpa.github.io/todo/index.html)
 
 > ### Скриншоты
 > ![](screen/img1.png)
