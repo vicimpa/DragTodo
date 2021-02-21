@@ -41,6 +41,7 @@ const Todo = () => {
     const title = input.current.value.trim()
     if (!title) return
     input.current.value = ''
+    input.current.focus()
     setTodos([...todos, { title, check: false }])
   }
 
