@@ -69,12 +69,16 @@ const Todo = () => {
       const body = item.parentElement as HTMLElement
       const { clientX, clientY, offsetX: oX, offsetY: oY } = e
       const { clientLeft, clientTop } = item
-      const { padding } = getComputedStyle(item, null)
+      const cs = getComputedStyle(item)
+      const padding = cs.getPropertyValue('padding') 
+                   || cs.getPropertyValue('padding-top')
+                   
       const minPad = parseFloat(padding)
       const offsetY = clientTop + oY + minPad
       const offsetX = clientLeft + oX + minPad
       let change = false
       let v = 0
+
 
       for(let el of body.childNodes) {
         if(el == helper.current) continue

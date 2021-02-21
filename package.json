@@ -6,6 +6,7 @@
     "css-loader": "~5.0.2",
     "http-server": "~0.12.3",
     "livereload": "~0.9.1",
+    "postcss-loader": "~5.0.0",
     "preact": "~10.5.12",
     "sass": "~1.32.8",
     "sass-loader": "~11.0.1",
@@ -18,6 +19,11 @@
   },
   "scripts": {
     "build": "webpack",
+    "build-prod": " NODE_ENV=production webpack",
     "start": "livereload | http-server -c-1"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

@@ -24,6 +24,11 @@
 > make
 ```
 
+> ### Запуск сборки под публикацию
+```bash
+> npm run build-prod
+```
+
 > ### Запуск сервера с livereload
 ```bash
 > npm start
